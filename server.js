@@ -5,8 +5,6 @@ const axios = require("axios");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`🦊 Server running on port ${PORT}`);
 
 // CWA API 設定
 const CWA_API_BASE_URL = "https://opendata.cwa.gov.tw/api";
@@ -162,7 +160,7 @@ app.use((req, res) => {
   });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT,"0.0.0.0" () => {
   console.log(`🚀 伺服器運行已運作`);
   console.log(`📍 環境: ${process.env.NODE_ENV || "development"}`);
 });
